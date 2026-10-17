@@ -1,0 +1,6 @@
+{
+  "name": "KULTURA QUEST",
+  "description": "Платформа за културно откривање и персонализирани културни авантури во Скопје и Македонија. Не гледај ја културата од страна. Откриј ја.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
