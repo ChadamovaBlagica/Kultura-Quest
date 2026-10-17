@@ -5,8 +5,6 @@ Kultura Quest is a Skopje cultural discovery app. The `main` branch is deployed 
 
 ## Run Locally
 
-## Run Locally
-
 **Prerequisites:** Bun or Node.js
 
 1. Install dependencies with `bun install` (or `npm install --legacy-peer-deps`).
