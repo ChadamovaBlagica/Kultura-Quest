@@ -25,6 +25,7 @@ import {
   Music,
 } from 'lucide-react';
 import { StaticSkopjeMap } from '../components/StaticSkopjeMap';
+import { resolveImageUrl } from '../utils/imageAssets';
 
 interface LandingPageProps {
   navigate: (route: string) => void;
@@ -145,7 +146,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ navigate }) => {
             <div className="lg:col-span-5">
               <div className="relative rounded-xl overflow-hidden border border-stone-300 shadow-md bg-stone-100">
                 <img
-                  src="/src/assets/images/hero_skopje_culture_1792095894217.jpg"
+                  src={resolveImageUrl('/src/assets/images/hero_skopje_culture_1792095894217.jpg')}
                   alt={t(
                     'Поглед кон Скопската Чаршија и терасите на Музејот на современа уметност',
                     'Panoramic view of Skopje Old Bazaar and contemporary art museum terraces'
@@ -395,7 +396,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ navigate }) => {
                       {/* Event Banner */}
                       <div className="relative h-44 bg-stone-950 overflow-hidden">
                         <img
-                          src={event.image || '/src/assets/images/skopje_nightlife_vinyl_1792169587307.jpg'}
+                          src={resolveImageUrl(event.image || '/src/assets/images/skopje_nightlife_vinyl_1792169587307.jpg')}
                           alt={event.title.mk}
                           className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300 opacity-90"
                           referrerPolicy="no-referrer"
@@ -489,7 +490,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ navigate }) => {
           <div className="group rounded-lg border border-stone-200 bg-white overflow-hidden flex flex-col transition-all hover:border-stone-400">
             <div className="relative h-48 bg-stone-100 overflow-hidden">
               <img
-                src={featuredEvent.image || '/src/assets/images/poster_art_exhibition_1792095894931.jpg'}
+                src={resolveImageUrl(featuredEvent.image || '/src/assets/images/poster_art_exhibition_1792095894931.jpg')}
                 alt={featuredEvent.title.mk}
                 className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                 referrerPolicy="no-referrer"
@@ -532,7 +533,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ navigate }) => {
           <div className="group rounded-lg border border-stone-200 bg-white overflow-hidden flex flex-col transition-all hover:border-stone-400">
             <div className="relative h-48 bg-stone-100 overflow-hidden">
               <img
-                src="/src/assets/images/hidden_gallery_space_1792095895430.jpg"
+                src={resolveImageUrl('/src/assets/images/hidden_gallery_space_1792095895430.jpg')}
                 alt="Prima Center Gallery"
                 className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                 referrerPolicy="no-referrer"

@@ -41,6 +41,7 @@ import {
   Layers,
 } from 'lucide-react';
 import { StaticSkopjeMap } from '../components/StaticSkopjeMap';
+import { resolveImageUrl } from '../utils/imageAssets';
 
 interface VecervaPageProps {
   navigate: (route: string) => void;
@@ -568,7 +569,7 @@ export const VecervaPage: React.FC<VecervaPageProps> = ({ navigate }) => {
           <div className="lg:col-span-5">
             <div className="relative rounded-xl overflow-hidden border border-stone-800 shadow-xl bg-stone-900">
               <img
-                src="/src/assets/images/skopje_nightlife_vinyl_1792169587307.jpg"
+                src={resolveImageUrl('/src/assets/images/skopje_nightlife_vinyl_1792169587307.jpg')}
                 alt="Skopje Nightlife Venue"
                 className="w-full h-[320px] sm:h-[360px] object-cover"
                 referrerPolicy="no-referrer"
@@ -797,7 +798,7 @@ export const VecervaPage: React.FC<VecervaPageProps> = ({ navigate }) => {
                       className="relative h-48 bg-stone-100 overflow-hidden cursor-pointer group"
                     >
                       <img
-                        src={event.image || '/src/assets/images/skopje_nightlife_vinyl_1792169587307.jpg'}
+                        src={resolveImageUrl(event.image || '/src/assets/images/skopje_nightlife_vinyl_1792169587307.jpg')}
                         alt={event.title.mk}
                         className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-300"
                         referrerPolicy="no-referrer"
@@ -963,7 +964,7 @@ export const VecervaPage: React.FC<VecervaPageProps> = ({ navigate }) => {
               {/* Image & Header */}
               <div className="relative h-64 bg-stone-900 shrink-0">
                 <img
-                  src={event.image || '/src/assets/images/skopje_nightlife_vinyl_1792169587307.jpg'}
+                  src={resolveImageUrl(event.image || '/src/assets/images/skopje_nightlife_vinyl_1792169587307.jpg')}
                   alt={event.title.mk}
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"

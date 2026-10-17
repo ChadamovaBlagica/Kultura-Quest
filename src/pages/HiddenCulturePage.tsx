@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { useCulturalData } from '../context/CulturalContext';
 import { VerificationBadge } from '../components/VerificationBadge';
+import { resolveImageUrl } from '../utils/imageAssets';
 import {
   Sparkles,
   MapPin,
@@ -108,7 +109,7 @@ export const HiddenCulturePage: React.FC<HiddenCultureProps> = ({ navigate }) =>
             <div>
               <div className="relative h-60 bg-stone-100 overflow-hidden">
                 <img
-                  src={venue.image}
+                  src={resolveImageUrl(venue.image)}
                   alt={venue.name.mk}
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"

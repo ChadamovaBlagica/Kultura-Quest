@@ -3,6 +3,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { useCulturalData } from '../context/CulturalContext';
 import { VerificationBadge } from '../components/VerificationBadge';
 import { getEventPriceLabel, hasConfirmedEventPrice } from '../utils/eventUtils';
+import { resolveImageUrl } from '../utils/imageAssets';
 import { CulturalCategory, VerificationStatus } from '../types';
 import {
   Search,
@@ -189,7 +190,7 @@ export const DiscoverPage: React.FC<DiscoverPageProps> = ({ navigate }) => {
                 <div>
                   <div className="relative h-48 bg-stone-100">
                     <img
-                      src={event.image || '/src/assets/images/poster_art_exhibition_1792095894931.jpg'}
+                      src={resolveImageUrl(event.image || '/src/assets/images/poster_art_exhibition_1792095894931.jpg')}
                       alt={event.title.mk}
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
@@ -271,7 +272,7 @@ export const DiscoverPage: React.FC<DiscoverPageProps> = ({ navigate }) => {
               <div>
                 <div className="relative h-48 bg-stone-100">
                   <img
-                    src={venue.image}
+                    src={resolveImageUrl(venue.image)}
                     alt={venue.name.mk}
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { useCulturalData } from '../context/CulturalContext';
+import { resolveImageUrl } from '../utils/imageAssets';
 import { VerificationBadge } from '../components/VerificationBadge';
 import { PosterExtractionResult, CulturalCategory } from '../types';
 import {
@@ -26,7 +27,7 @@ export const ScanPage: React.FC<ScanPageProps> = ({ navigate }) => {
   const { addNewEvent, saveEvent } = useCulturalData();
 
   const [posterImage, setPosterImage] = useState<string | null>(
-    '/src/assets/images/poster_art_exhibition_1792095894931.jpg'
+    resolveImageUrl('/src/assets/images/poster_art_exhibition_1792095894931.jpg')
   );
   const [isScanning, setIsScanning] = useState(false);
   const [extractedData, setExtractedData] = useState<PosterExtractionResult | null>(null);
@@ -104,7 +105,7 @@ export const ScanPage: React.FC<ScanPageProps> = ({ navigate }) => {
   };
 
   const handleLoadSample = () => {
-    const samplePath = '/src/assets/images/poster_art_exhibition_1792095894931.jpg';
+    const samplePath = resolveImageUrl('/src/assets/images/poster_art_exhibition_1792095894931.jpg');
     setPosterImage(samplePath);
     triggerScan(samplePath);
   };

@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Venue } from '../types';
+import { resolveImageUrl } from '../utils/imageAssets';
 import { VerificationBadge } from './VerificationBadge';
 import {
   MapPin,
@@ -464,7 +465,7 @@ export const StaticSkopjeMap: React.FC<StaticSkopjeMapProps> = ({
             <div className="flex items-center gap-3">
               <div className="w-16 h-14 bg-stone-100 rounded-lg overflow-hidden shrink-0 border border-stone-200">
                 <img
-                  src={activeOrHovered.image}
+                  src={resolveImageUrl(activeOrHovered.image)}
                   alt={activeOrHovered.name.mk}
                   className="w-full h-full object-cover"
                 />
