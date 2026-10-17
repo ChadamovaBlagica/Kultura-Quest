@@ -14,5 +14,6 @@ Kultura Quest is a Skopje cultural discovery app. The `main` branch is deployed 
 ## GitHub Pages
 
 Every push to `main` builds and deploys the static frontend to `https://chadamovablagica.github.io/Kultura-Quest/`. The repository's Pages source must be set to **GitHub Actions** in Settings → Pages.
+Track each deployment in the repository's Actions tab under **Deploy to GitHub Pages**.
 
 GitHub Pages serves only static files. The Express API routes (`/api/guide`, `/api/scan-poster`, and `/api/generate-adventure`) require a separate server deployment and are not available on the Pages site. Keep `GEMINI_API_KEY` on that server; do not add it to the frontend or repository.
